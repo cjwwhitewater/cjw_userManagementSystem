@@ -23,4 +23,19 @@ public class UserService {
     public User findById(Long id) {
         return userRepository.findById(id).orElse(null);
     }
+    public Page<User> getUsers(String name, int page, int size) {
+        Pageable pageable = PageRequest.of(page, size);
+        return userRepository.findByNameContaining(name, pageable);
+    }
+    public User updateUser(Long id, User userDetails) {
+        User user = userRepository.findById(id).orElseThrow();
+        user.setName(userDetails.getName());
+        user.setEmail(userDetails.getEmail());
+        user.setAge(userDetails.getAge());
+        return userRepository.save(user);
+    }
+    public void deleteById(Long id) {
+        userRepository.deleteById(id);
+    }
+
 }
