@@ -136,4 +136,51 @@ export default {
 </script>
 
 <style>
+table{
+  margin: auto;
+  width: 100%;
+  background-color: blanchedalmond;
+  border-collapse: collapse;
+  border :1px solid black;
+}
+td{
+  border-bottom: 1px solid #ddd;
+  height: 10px; 
+  line-height: 20px
+}
+th,td{
+  text-align: left;
+}
+tr:hover {
+background-color: #f5f5f5;
+}
+#body{
+  background-color :deepskyblue;
+}
+tr{
+  background-color:burlywood;
+}
+#users{
+  left: 50%;
+  top: 50%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+button{
+  width: 110px;
+  height: 30px;
+  padding: 5px;
+  margin: 5px;
+  box-shadow: 0 9px #999;
+  border-radius: 15px;
+  background-color :#666 ;
+  color:wheat;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+background-color: #0db5ed;
+box-shadow: 0 5px #666;
+transform: translateY(4px);
+}
 </style>
